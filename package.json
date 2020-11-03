@@ -1,0 +1,63 @@
+{
+  "name": "mdeditor",
+  "productName": "mdeditor",
+  "version": "03.11.2020",
+  "description": "Editor MarkDown",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "htmlcssphpjs",
+    "email": "63463168+htmlcssphpjs@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "mdeditor"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "editor.md": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-compile": "^6.4.4"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.9.1",
+    "electron-forge": "^5.2.4",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron-prebuilt-compile": "8.2.0",
+    "electron": "10.1.5"
+  }
+}
